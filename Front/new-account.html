@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Front/images/Logo_atualizada_uni_branca.png">
+    <link rel="stylesheet" href="new-account.css">
+    <script src="new-account.js"></script>
+    <title>AdvoBusca</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="class-header">
+
+            <div class="logo-class-header">
+                <a href="/Front/home.html">
+                    <img src="/Front/images/Logo_atualizada_Right_branco.png" alt="">
+                </a>
+            </div>
+
+            <div class="item1-class-header">
+                <a href="">
+                    <h3>O que é o AdvoBusca?</h3>
+                </a>
+            </div>
+
+            <div class="item2-class-header">
+                <a href="">
+                    <h3>Áreas</h3>
+                </a>
+            </div>
+
+            <div class="item3-class-header">
+                <a href="">
+                    <h3>Sobre nós</h3>
+                </a>
+            </div>
+
+            <div class="signup-class-header">
+                <a href="">
+                <button>Se cadastre</button>
+                </a>
+            </div>
+
+            <div class="login-class-header">
+                <a href="/Front/login.html">
+                <button>Entre</button>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="cadastro">
+
+            <div class="title-cadastro">
+                <h1>Crie sua conta!</h1>
+            </div>
+
+            <div class="form-cadastro">
+                <form onsubmit="validarFormulario()">
+
+                    <div class="form-up">
+
+                    <div class="nome">
+                        <h3>Nome</h3>
+                        <input type="text" id="name" >
+                    </div>
+
+                    <div class="CPF">
+                        <h3>CPF</h3>
+                        <input type="text" id="CPF" >
+                    </div>
+
+                    <div class="RG">
+                        <h3>RG</h3>
+                        <input type="text" maxlength="14" id="RG">
+                    </div>
+
+
+                    </div>
+
+
+                    <div class="form-down">
+
+                    <div class="Telefone">
+                        <h3>Telefone</h3>
+                        <input type="text" maxlength="14" id="Telefone">
+                    </div>
+
+                    <div class="data-nasc">
+                        <h3>Data de nascimento</h3>
+                        <input type="date" id="data-nasc" >
+                    </div>
+
+                    <div class="email">
+                        <h3>Email</h3>
+                        <input type="text" id="email">
+                    </div>
+
+
+                    </div>
+
+                    <div class="sexo">
+                        <h3>Sexo</h3>
+                        <input type="radio" id="masculino" name="sexo" value="masculino">
+		                <label for="masculino">Masculino</label><br>
+                        
+                        <input type="radio" id="feminino" name="sexo" value="feminino">
+                        <label for="feminino">Feminino</label><br>
+                        
+                        <input type="radio" id="outro" name="sexo" value="outro" >
+                        <label for="outro">Outro</label><br>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+
+    </main>
+
+
+    </body>
+    </html>

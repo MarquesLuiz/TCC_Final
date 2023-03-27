@@ -1,12 +1,13 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 html{
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 a{
     text-decoration: none;
 }
-
 
 header{
     background-color: rgb(0, 0, 133);
@@ -15,7 +16,8 @@ header{
     left: 0;
     width: 100%;
     z-index: 999px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);;
+    box-shadow: rgba(255, 255, 255, 0.178) 0px 19px 38px, 
+    rgba(255, 255, 255, 0.082) 0px 15px 12px;
 }
 
 .class-header{
@@ -106,60 +108,133 @@ header{
 }
 
 
+.title-login{
+    margin-top: 9%;
+    align-items: center;
+    text-align: center;
+}
 
 
-.future-carrosel img{
-    left: 0;
-    margin-top: 85px;
-    width: 100%;
+.box-login{
+    margin-top: 2%;
+    border-color: rgba(255, 255, 255, 0);
+    border-style: ridge;
+    width: 500px;
+    height: 450px;
+    margin-left: 34%;
+    border-width: 2px;
+    align-items: center;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
 
 
-
-.options{
-    margin-top: 10%;
+.selection-type{
+    display: flex;
+    margin-top: 1%;
+    border-bottom: 1px;
+    border-style: solid;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-color: rgba(0, 0, 0, 0.144);
 }
-.options a{
+.selection-type button{
+    margin-bottom: 9%;
+}
+
+.type-cliente{
+    margin-left: 27%;
+}
+.type-cliente button{
+    width: 100px ;
+    height: 40px;
+    font-size: 20px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.type-advogado{
+    margin-left: 7%;
+}
+.type-advogado button{
+    width: 100px ;
+    height: 40px;
+    font-size: 20px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    background-color: white;
+    cursor: pointer;
+}
+
+
+.login{
+
+}
+
+.login-email{
+    
+}
+.login-email h5{
     color: black;
 }
-.title_options{
-    margin-left: 40%;
+.login-email input{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
 }
-.itens_options{
-    display: flex;
+
+
+.login-password{
+    margin-top: 7%;
+}
+
+.login-password h5{
+    
+} 
+.login-password input{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+.login-password input:{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+
+.button-enter {
+    margin-top: 8%;
+    width: 110px;
+    height: 30px;
+    background-color: white;
+    cursor: pointer;
+}
+.button-enter:hover{
+    border-color: rgb(0, 0, 133);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+     rgba(17, 17, 26, 0.1) 0px 8px 24px,
+      rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+
+.new-account {
     margin-top: 5%;
 }
-.site_option{
-    text-align: center;
-    padding: 1%;
-    border-style: ridge;
-    border-color: rgba(0, 0, 0, 0.226);
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    margin-left: 23%;
-}
-.site_option:hover{
-    box-shadow: rgba(0, 0, 0, 0.452) 0px 5px 25px 0px;
-}
-.app_option{
-    text-align: center;
-    padding: 1%;
-    border-style: ridge;
-    border-color: rgba(0, 0, 0, 0.226);
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    margin-left: 10%;
-}
-.app_option:hover{
-    box-shadow: rgba(0, 0, 0, 0.452) 0px 5px 25px 0px;
+.new-account a{
+    color: black;
 }
 
 
-.sobre-nos{
-    display: flex;
-    margin-top: 15%;
-}
+
+
+
 
 
 

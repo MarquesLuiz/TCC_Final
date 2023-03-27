@@ -1,12 +1,12 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 html{
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
 }
 a{
     text-decoration: none;
 }
-
 
 header{
     background-color: rgb(0, 0, 133);
@@ -15,7 +15,8 @@ header{
     left: 0;
     width: 100%;
     z-index: 999px;
-    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);;
+    box-shadow: rgba(255, 255, 255, 0.178) 0px 19px 38px, 
+    rgba(255, 255, 255, 0.082) 0px 15px 12px;
 }
 
 .class-header{
@@ -107,59 +108,111 @@ header{
 
 
 
-
-.future-carrosel img{
-    left: 0;
-    margin-top: 85px;
-    width: 100%;
-}
-
-
-
-
-.options{
+.cadastro{
     margin-top: 10%;
 }
-.options a{
-    color: black;
+
+.title-cadastro{
+    margin-left: 43%;
 }
-.title_options{
-    margin-left: 40%;
+
+.form-cadastro{
+    border-style:solid;
+    border-color: transparent;
+    margin-left: 14%;
+    width: 1100px;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+     rgba(17, 17, 26, 0.1) 0px 8px 24px,
+      rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
-.itens_options{
+
+.form-up{
     display: flex;
-    margin-top: 5%;
-}
-.site_option{
     text-align: center;
-    padding: 1%;
-    border-style: ridge;
-    border-color: rgba(0, 0, 0, 0.226);
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
-    margin-left: 23%;
+    margin-top: 3%;
 }
-.site_option:hover{
-    box-shadow: rgba(0, 0, 0, 0.452) 0px 5px 25px 0px;
-}
-.app_option{
-    text-align: center;
-    padding: 1%;
-    border-style: ridge;
-    border-color: rgba(0, 0, 0, 0.226);
-    border-width: 2px;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+.nome{
     margin-left: 10%;
 }
-.app_option:hover{
-    box-shadow: rgba(0, 0, 0, 0.452) 0px 5px 25px 0px;
+.nome input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+.CPF{
+    margin-left: 15%;
+}
+.CPF input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+.RG{
+    margin-left: 15%;
+}
+.RG input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
 }
 
 
-.sobre-nos{
+.form-down{
     display: flex;
-    margin-top: 15%;
+    text-align: center;
+    margin-top: 4%;
+}
+.Telefone{
+    margin-left: 10%;
+}
+.Telefone input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+.data-nasc{
+    margin-left: 14.4%;
+}
+.data-nasc input{
+    width: 180px;
+    font-size: larger;
+    cursor: pointer;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+.email{
+    margin-left: 13.5%;
+}
+.email input{
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+}
+.email input:hover{
+    border-color: rgb(0, 23, 231);
+    box-shadow: rgba(0, 23, 231, 0.25) 0px 4px 3px,
+     rgba(0, 23, 231, 0.25) 0px 4px 3px;
 }
 
 
-
+.sexo{
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+.sexo input{
+    cursor: pointer;
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    left: 0;
+    top: 1px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+}
