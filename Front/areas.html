@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="areas.css">
+    <title>AdvoBusca</title>
+</head>
+<body>
+    
+
+    <header>
+
+        <div class="class-header">
+
+            <div class="logo-class-header">
+                <a href="/Front/home.html">
+                    <img src="/Front/images/Logo_atualizada_Right_branco.png" alt="">
+                </a>
+            </div>
+
+            <div class="item1-class-header">
+                <a href="">
+                    <h3>Nosso Valores</h3>
+                </a>
+            </div>
+
+            <div class="item2-class-header">
+                <a href="/Front/areas.html">
+                    <h3>Áreas</h3>
+                </a>
+            </div>
+
+            <div class="item3-class-header">
+                <a href="">
+                    <h3>Sobre nós</h3>
+                </a>
+            </div>
+
+            <div class="signup-class-header">
+                <a href="/Front/new-account.html">
+                <button>Se cadastre</button>
+                </a>
+            </div>
+
+            <div class="login-class-header">
+                <a href="/Front/login.html">
+                <button>Entre</button>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <nav>
+            <div class="areas-advogado">
+
+                <div class="direito-civil">
+                    <button  id="civil" onclick="mudartextocivil()">
+                    <h3>Direito civil</h3>
+                    </button>
+                </div>
+
+                <div class="direito-ambiental">
+                    <button  id="ambiental" onclick="mudartextoambiental()">
+                    <h3>Direito ambiental</h3>
+                    </button>
+                </div>
+
+                <div class="direito-empresarial">
+                    <button id="empresarial" onclick="mudartextoempresarial()">
+                    <h3>Direito empresarial</h3>
+                    </button>
+                </div>
+
+                <div class="direito-digital">
+                    <button id="digital" onclick="mudartextodigital()">
+                    <h3>Direito digital</h3>
+                    </button>
+                </div>
+
+                <div class="direito-tributário">
+                    <button id="tributario" onclick="mudartextotributário()">
+                    <h3>Direito tributário</h3>
+                    </button>
+                </div>
+
+                <div class="direito-trabalhista">
+                    <button  id="trabalhista" onclick="mudartextotrabalhista()">
+                    <h3>Direito trabalhista</h3>
+                    </button>
+                </div>
+
+                <div class="direito-consumidor">
+                    <button  id="consumidor" onclick="mudartextoconsumidor()">
+                    <h3>Direito consumidor</h3>
+                    </button>
+                </div>
+
+                <div class="direito-criminalista">
+                    <button  id="criminalista" onclick="mudartextocriminalista()">
+                    <h3>Direito criminalista</h3>
+                    </button>
+                </div>
+
+            </div>
+        </nav>
+
+
+        <article>
+            <div class="article">
+                <div id="explicacao-area">
+                <h2>Tipos de Direito:</h2>
+                <h4>Você sabia que você que há várias áreas de direito? Entender 
+                    que tipo de advogado você precisa e qual área do Direito melhor se <br>
+                    adequa às suas necessidades e necessidades do (s) seu (s) caso (s) 
+                    é fundamental para um bom esclarecimento sobre seu caso. <br>
+                    Por isso, neste artigo, você conhecerá algumas das principais áreas
+                    de atuação para quem não conhece cada área. Também <br> 
+                    verá novos cargos e atribuições, que têm surgido com a 
+                    modificação de leis, e com o avanço da tecnologia. <br> 
+                    Esperamos que este conteúdo contribua para a resolução da sua dúvida! Boa leitura. </h4>
+                </div>
+            </div>
+        </article>
+
+
+    </main>
+
+
+</body>
+
+<script>
+    function mudartextocivil() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito Civil:</h2>O Direito Civil, dentro do ordenamento jurídico brasileiro, é o ramo do direito que lida com as relações jurídicas, como os direitos e as obrigações, de pessoas físicas e jurídicas dentro da esfera civil.Se a descrição parece abrangente, é porque de fato ela é. O Direito Civil é provavelmente o ramo mais amplo do estudo e aplicação do direito dentro do território nacional, ditando os regramentos das relações de pessoas nas questões patrimoniais, obrigacionais e familiares, por exemplo.Aqui, entram questões relacionadas a cobranças em geral, danos morais, herança, adoção, divórcio, renegociação de contratos.";
+    }
+    function mudartextoambiental() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito Ambiental:</h2>O Direito Ambiental é um ramo jurídico constituído por um conjunto de leis, normas e princípios que visam a proteção do meio ambiente como um todo, a preservação das espécies e a qualidade de vida. As disposições e os instrumentos legais de Direito Ambiental tratam de aspectos ecológicos, econômicos e sociais, influenciando as relações individuais, de governo e de empresas com o ecossistema.";;
+    }
+    function mudartextoempresarial() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito empresarial:</h2> Essa área, também chamada de Direito Comercial, é a responsável por regular as atividades comerciais de pessoas físicas e jurídicas. O ramo abrange os direitos e deveres dos empresários e sociedades empresariais, os contratos de comércio, a propriedade intelectual e várias outras matérias. Nesse sentido, o advogado lida com causas empresariais que envolvem abertura e fechamento de empresas, registros de marcas e processos de falência, por exemplo. Outra possibilidade é auxiliar a tomada de decisões de uma empresa por meio de orientação jurídica.";
+    }
+    function mudartextodigital() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito digital:</h2> O Direito Digital é um ramo novo no Direito e surgiu para tutelar as questões jurídicas relativas ao mundo digital. Tem como objetivo manter a organização e a interação nos meios virtuais mais harmoniosa, podendo ser aplicado em todos os setores que se utilizam, de alguma forma, da tecnologia.O advogado especializado em Direito Digital tem uma vasta gama de atuação, devido ao Direito Digital atuar em vários campos de ação, como por exemplo:    •	contencioso: civil, trabalhista, tributário, previdenciário e autoral; •	consultivo: consumidor e civil;  •	criminal: crimes digitais, injúria, difamação, calúnia e furto de dados;  •	contratos: e-commerce e startup;  •	compliance: novas práticas jurídicas-empresariais relacionadas ao Direito Digital.";;
+    }
+    function mudartextotributário() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito tributário:</h2> Direito tributário é a área do direito responsável por determinar e fiscalizar a arrecadação de tributos, como taxas e impostos. Também chamado de Direito Fiscal, o segmento tem, como principal papel, o combate de possíveis abusos por parte do Fisco e o controle de pagamento dos contribuintes.";;
+    }
+    function mudartextotrabalhista() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito trabalhista:</h2> O direito do trabalho, também chamado de direito trabalhista, é um ramo do direito privado que é responsável por regular a relação jurídica entre trabalhadores e empregadores, baseado nos princípios e leis trabalhistas.";;
+    }
+    function mudartextoconsumidor() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito do Consumidor:</h2> Direito do Consumidor é o ramo do Direito que rege as relações de consumo, as quais se caracterizam pela interação entre fornecedores e consumidores cujo vínculo é estabelecido por ocasião de uma compra ou contratação de bem ou serviço.";;
+    }
+    function mudartextocriminalista() {
+        document.getElementById("explicacao-area").innerHTML = 
+        "<h2>Direito criminalista:</h2> Um advogado criminalista é um profissional jurídico que se especializa na defesa de seus clientes acusados de crimes. Sua função é assegurar que os seus clientes recebam um julgamento justo e equilibrado, usando todos os recursos da lei para ajudar a proteger os seus direitos e interesses.";
+    }
+</script>
+
+
+</html>

@@ -16,7 +16,7 @@
         <div class="class-header">
 
             <div class="logo-class-header">
-                <a href="">
+                <a href="/Front/home.html">
                     <img src="/Front/images/Logo_atualizada_Right_branco.png" alt="">
                 </a>
             </div>
@@ -69,11 +69,11 @@
         <div class="selection-type">
 
             <div class="type-cliente">
-                <button id="option_cliente" name="type">Cliente</button>
+                <button id="option_cliente" name="type" >Cliente</button>
             </div>
 
             <div class="type-advogado">
-                <button id="option_advogado" name="type">Advogado</button>
+                <button id="option_advogado" name="type" >Advogado</button>
             </div>
 
         </div>
@@ -89,13 +89,14 @@
 
             <div class="login-password">
                 <h5>digite sua senha</h5>
-                <input type="password" id="password">
+                <input type="password" id="senha">
+                <span class="mostrar-senha"><img class="fas fa-eye" src="/Front/images/icon-password.png" alt=""></span>
             </div>
 
             <button type="submit" class="button-enter">Entre</button>
             
             <div class="new-account">
-            <a href="new-account.html"><h6>não tem conta? Clique aqui!</h6></a>
+            <a href="#" id="nova-conta"><h6>não tem conta? Clique aqui!</h6></a>
             </div>
 
            </form>
@@ -107,7 +108,45 @@
 
 
     </main>
+    <a href="/Front/new-account-adv.html"></a>
 
 
 </body>
+
+    <script>
+        const senhaInput = document.getElementById('senha');
+        const mostrarSenhaBtn = document.querySelector('.mostrar-senha');
+
+        mostrarSenhaBtn.addEventListener('click', () => {
+        if (senhaInput.type === 'password') {
+            senhaInput.type = 'text';
+            mostrarSenhaBtn.querySelector('i').classList.remove('fa-eye');
+            mostrarSenhaBtn.querySelector('i').classList.add('fa-eye-slash');
+        } else {
+            senhaInput.type = 'password';
+            mostrarSenhaBtn.querySelector('i').classList.remove('fa-eye-slash');
+            mostrarSenhaBtn.querySelector('i').classList.add('fa-eye');
+        }
+        });
+    </script>
+
+    <script>
+        const cliente = '/Front/new-account.html';
+        const advogado = '/Front/new-account-adv.html';
+    
+        const meuLink = document.getElementById('nova-conta');
+        const pagCliente = document.getElementById('option_cliente');
+        const pagAdvogado = document.getElementById('option_advogado');
+    
+        pagCliente.addEventListener('click', () => {
+        meuLink.href = cliente;
+        });
+    
+        pagAdvogado.addEventListener('click', () => {
+        meuLink.href = advogado;
+        });
+    </script>
+
+    
+
 </html>
