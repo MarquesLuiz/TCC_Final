@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="new-account-adv.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="jquery.mask.min.js"></script>
     <title>AdvoBusca</title>
@@ -140,12 +141,17 @@
 
                         <div class="forms-adv-up">
 
-                        
+                            <div class="colun-cod-perco">
                                 <div class="cod-oab">
                                     <h3>Codigo OAB</h3>
                                     <input type="text" id="cod-oab" maxlength="6">
                                 </div>
 
+                                <div class="preco">
+                                    <h3>Preço da consulta</h3>
+                                    <input type="text" id="valor" name="valor" data-inputmask="'alias': 'currency', 'prefix': 'R$ ', 'autoGroup': true, 'digits': 2, 'radixPoint': ',', 'groupSeparator': '.'">
+                                </div>
+                            </div>
 
                                 <div class="areas">
 
@@ -252,6 +258,9 @@
     var nascimento = document.getElementById("data-nasc").value;
     var email = document.getElementById("email").value;
     var senha = document.getElementById("senha").value;
+    var valor = document.getElementById("valor").value;
+    var codOab = document.getElementById("cod-oab").value;
+    var numeroCasa = document.getElementById("numero").value;
 
     if (nome == "") {
         alert("Por Favor, Digite seu Nome");
@@ -279,6 +288,14 @@
     }
     if (senha == "") {
         alert("Por Favor, Digite sua senha");
+        return false;
+    }
+    if (valor == "") {
+        alert("Por Favor, Digite o valor de sua consulta:");
+        return false;
+    }
+    if (codOab == "") {
+        alert("Por Favor, Digite seu codigo OAB");
         return false;
     }
 
@@ -315,4 +332,10 @@
         });
         });
     });
+   </script>
+
+   <script>
+        $(document).ready(function(){
+            $('#valor').inputmask();
+        });
    </script>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <link rel="icon" type="image/x-icon" href="/Front/images/Logo_atualizada_uni_branca.png">
+    <link rel="stylesheet" href="profile.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_AQUI"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.mask.min.js"></script>
+    <title>AdvoBusca</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="class-header">
+
+            <div class="logo-class-header">
+                <a href="/Front/home.html">
+                    <img src="/Front/images/Logo_atualizada_Right_branco.png" alt="">
+                </a>
+            </div>
+
+            <div class="item1-class-header">
+                <a href="">
+                    <h3>O que é o AdvoBusca?</h3>
+                </a>
+            </div>
+
+            <div class="item2-class-header">
+                <a href="">
+                    <h3>Áreas</h3>
+                </a>
+            </div>
+
+            <div class="item3-class-header">
+                <a href="">
+                    <h3>Sobre nós</h3>
+                </a>
+            </div>
+
+            <div class="signup-class-header">
+                <a href="">
+                <button>Se cadastre</button>
+                </a>
+            </div>
+
+            <div class="login-class-header">
+                <a href="/Front/login.html">
+                <button>Entre</button>
+                </a>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main>
+        <div class="profile-advogado">
+            <div class="nome-foto">
+                <img src="./images/advogado-1.jpg" alt="Foto do Advogado">
+                <h1>João Silva</h1>
+            </div>
+            <div class="estrelas">
+                <a href="javascript:void(0)" onclick="Avaliar(1)">
+                    <img src="images/star0.webp" id="s1"></a>
+                    
+                    <a href="javascript:void(0)" onclick="Avaliar(2)">
+                    <img src="images/star0.webp" id="s2"></a>
+                    
+                    <a href="javascript:void(0)" onclick="Avaliar(3)">
+                    <img src="images/star0.webp" id="s3"></a>
+                    
+                    <a href="javascript:void(0)" onclick="Avaliar(4)">
+                    <img src="images/star0.webp" id="s4"></a>
+                    
+                    <a href="javascript:void(0)" onclick="Avaliar(5)">
+                    <img src="images/star0.webp" id="s5"></a>         
+            </div>
+                
+            <div class="info-advogado">
+                <h3>Áreas de Atuação</h3>
+                <ul>
+                    <li>Direito Civil</li>
+                    <li>Direito Trabalhista</li>
+                    <li>Direito Penal</li>
+                </ul>
+            
+                <h3>Contato</h3>
+                <ul>
+                    <li>E-mail: advogado@email.com</li>
+                    <li>Telefone: (11) 1234-5678</li>
+                </ul>
+
+                <div class="endereco" onload="initMap()">
+                    <div id="map" style="width:100%;height:500px;"></div>
+                </div>
+            </div>
+
+            
+        </div>
+      </main>
+
+
+      <script>
+        function Avaliar(estrela) {
+          var url = window.location;
+          url = url.toString()
+          url = url.split("index.html");
+          url = url[0];
+      
+          var s1 = document.getElementById("s1").src;
+          var s2 = document.getElementById("s2").src;
+          var s3 = document.getElementById("s3").src;
+          var s4 = document.getElementById("s4").src;
+          var s5 = document.getElementById("s5").src;
+          var avaliacao = 0;
+      
+          if (estrela == 5){ 
+            if (s5 == url + "images/star0.webp") {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star1.png";
+              document.getElementById("s5").src = "images/star1.png";
+              avaliacao = 5;
+            } else {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star1.png";
+              document.getElementById("s5").src = "images/star1.png";
+              avaliacao = 4;
+            }
+          }
+      
+          //ESTRELA 4
+          if (estrela == 4){ 
+            if (s4 == url + "images/star0.webp") {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star1.png";
+              document.getElementById("s5").src = "images/star0.webp";
+              avaliacao = 4;
+            } else {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star1.png";
+              document.getElementById("s5").src = "images/star0.webp";
+              avaliacao = 3;
+            }
+          }
+      
+          //ESTRELA 3
+          if (estrela == 3){ 
+            if (s3 == url + "images/star0.webp") {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star0.webp";
+              document.getElementById("s5").src = "images/star0.webp";
+              avaliacao = 3;
+            } else {
+              document.getElementById("s1").src = "images/star1.png";
+              document.getElementById("s2").src = "images/star1.png";
+              document.getElementById("s3").src = "images/star1.png";
+              document.getElementById("s4").src = "images/star0.webp";
+              document.getElementById("s5").src = "images/star0.webp";
+              avaliacao = 2;
+            }
+          }
+      
+          //ESTRELA 2
+        if (estrela == 2){ 
+        if (s2 == url + "images/star0.webp") {
+        document.getElementById("s1").src = "images/star1.png";
+        document.getElementById("s2").src = "images/star1.png";
+        document.getElementById("s3").src = "images/star0.webp";
+        document.getElementById("s4").src = "images/star0.webp";
+        document.getElementById("s5").src = "images/star0.webp";
+        avaliacao = 2;
+        } else {
+        document.getElementById("s1").src = "images/star1.png";
+        document.getElementById("s2").src = "images/star1.png";
+        document.getElementById("s3").src = "images/star0.webp";
+        document.getElementById("s4").src = "images/star0.webp";
+        document.getElementById("s5").src = "images/star0.webp";
+        avaliacao = 1;
+        }}
+        
+        //ESTRELA 1
+        if (estrela == 1){ 
+        if (s1 == url + "images/star0.webp") {
+        document.getElementById("s1").src = "images/star1.png";
+        document.getElementById("s2").src = "images/star0.webp";
+        document.getElementById("s3").src = "images/star0.webp";
+        document.getElementById("s4").src = "images/star0.webp";
+        document.getElementById("s5").src = "images/star0.webp";
+        avaliacao = 1;
+        } else {
+        document.getElementById("s1").src = "images/star1.png";
+        document.getElementById("s2").src = "images/star0.webp";
+        document.getElementById("s3").src = "images/star0.webp";
+        document.getElementById("s4").src = "images/star0.webp";
+        document.getElementById("s5").src = "images/star0.webp";
+        avaliacao = 0;
+        }}
+        
+        document.getElementById('rating').innerHTML = avaliacao;
+        
+        }
+        </script>
+        
+        <script>
+            function initMap() {
+                var location = {lat: LATITUDE, lng: LONGITUDE};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 16,
+                    center: location
+                });
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map
+                });
+            }
+        </script>
