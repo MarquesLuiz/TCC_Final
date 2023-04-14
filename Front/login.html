@@ -93,7 +93,8 @@
                 <span class="mostrar-senha"><img class="fas fa-eye" src="/Front/images/icon-password.png" alt=""></span>
             </div>
 
-            <button type="submit" class="button-enter"><a href="list.html">Entre</a></button>
+            <button type="submit" class="button-enter" onclick="entrar()"><a href="/Front/list.html">Entre</a></button>
+
             
             <div class="new-account">
             <a href="#" id="nova-conta"><h6>não tem conta? Clique aqui!</h6></a>
@@ -131,6 +132,24 @@
     </script>
 
     <script>
+        function entrar() {
+        var email = document.getElementById("e-mail").value;
+        var senha = document.getElementById("senha").value;
+
+        if (email == "") {
+            alert("Por Favor, Digite seu Email");
+            return false;
+        }
+        if (senha == "") {
+            alert("Por Favor, Digite sua senha");
+            return false;
+        }
+
+        return true
+        }
+    </script>
+
+    <script>
         const cliente = '/Front/new-account.html';
         const advogado = '/Front/new-account-adv.html';
     
@@ -146,6 +165,9 @@
         meuLink.href = advogado;
         });
     </script>
+
+
+
 
     
 
