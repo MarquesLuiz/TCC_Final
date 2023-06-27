@@ -64,48 +64,19 @@
             <h2>Acesse sua conta</h2>
         </div>
 
-    <div class="box-login">
-        
-        <div class="selection-type">
-
-            <div class="type-cliente">
-                <button id="option_cliente" name="type" >Cliente</button>
+        <div class="box-login">
+            <div class="selection-type">
+                <div class="type-cliente">
+                    <button id="option_cliente" name="type" onclick="mudarFrame('C')">Cliente</button>
+                </div>
+                <div class="type-advogado">
+                    <button id="option_advogado" name="type" onclick="mudarFrame('A')">Advogado</button>
+                </div>
             </div>
-
-            <div class="type-advogado">
-                <button id="option_advogado" name="type" >Advogado</button>
+            <div class="login" style="height: 500px;">
+                <iframe id="frameLogin"  width="100%" height="100%"></iframe>
             </div>
-
         </div>
-
-        <div class="login">
-
-           <form onsubmit="return validarFormulario()">
-
-            <div class="login-email">
-                <h5>digite seu email</h5>
-                <input type="text" id="e-mail">
-            </div>
-
-            <div class="login-password">
-                <h5>digite sua senha</h5>
-                <input type="password" id="senha">
-                <span class="mostrar-senha"><img class="fas fa-eye" src="/Front/images/icon-password.png" alt=""></span>
-            </div>
-
-            <button type="submit" class="button-enter" onclick="entrar()"><a href="/Front/list.html">Entre</a></button>
-
-            
-            <div class="new-account">
-            <a href="#" id="nova-conta"><h6>não tem conta? Clique aqui!</h6></a>
-            </div>
-
-           </form>
-
-        </div>
-
-
-    </div>
 
 
     </main>
@@ -166,7 +137,25 @@
         });
     </script>
 
+<script>
+    function mudarFrame(tipo) {
+        var iframe = document.getElementById('frameLogin');
+        var novoSrc = '';
 
+        if (tipo === 'C') {
+            novoSrc = 'loginCliente.html';
+        } else if (tipo === 'A') {
+            novoSrc = 'loginAdvogado.html';
+        }
+
+        iframe.src = novoSrc;
+    }
+
+    window.onload = function() {
+        var iframe = document.getElementById('frameLogin');
+        iframe.src = 'loginCliente.html';
+    };
+</script>
 
 
     

@@ -177,13 +177,6 @@ header{
 }
 
 
-.login{
-
-}
-
-.login-email{
-    
-}
 .login-email h5{
     color: black;
 }
@@ -221,7 +214,6 @@ header{
   .fa-eye:before {
     content: "\f06e";
   }
-
 
 
 .login-password input{

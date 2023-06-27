@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/Front/images/Logo_atualizada_uni_branca.png">
+    <link rel="stylesheet" href="login.css">
+    <script src="myscripts.js"></script>
+    <title>AdvoBusca</title>
+</head>
+<body>
+    <div id="loginCliente">
+
+        <form onsubmit="return validarFormulario()">
+            <div class="login-email">
+                <h5>digite seu email</h5>
+                <input type="text" id="emailCliente">
+            </div>
+            <div class="login-password">
+                <h5>digite sua senha</h5>
+                <input type="password" id="senhaCliente">
+                <span class="mostrar-senha"><img class="fas fa-eye" src="/Front/images/icon-password.png" alt=""></span>
+            </div>
+            <button type="submit" class="button-enter" id="enterCliente" onclick="entrar()"><a href="/Front/list.html">Entre</a></button> 
+            <div class="new-account">
+            <a href="/Front/cadastroCliente/new-account.html" id="nova-conta"><h6>não tem conta? Clique aqui!</h6></a>
+            </div>
+        </form>
+
+    </div>
+</body>
+</html>
