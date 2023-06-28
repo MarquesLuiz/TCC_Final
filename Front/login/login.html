@@ -157,7 +157,109 @@
     };
 </script>
 
+<script>
+
+const { MongoClient } = require('mongodb');
+
+
+const url = 'mongodb://localhost:27017';
+
+
+const dbName = 'bdAdvoBusca';
+
+
+async function connectToDatabase() {
+  try {
+    
+    const client = await MongoClient.connect(url);
 
     
+    const db = client.db(AdvoBusca);
+
+   
+    return db;
+  } catch (error) {
+    console.error('Erro ao conectar ao banco de dados:', error);
+    throw error;
+  }
+}
+
+
+
+
+async function findClienteByEmailAndPassword(emailCliente, senha) {
+  try {
+   
+    const db = await connectToDatabase();
+
+ 
+    const clienteCollection = db.collection('cliente');
+
+   
+    const cliente = await clienteCollection.findOne({ Email: emailCliente, Senha: senha });
+
+  
+    return cliente;
+  } catch (error) {
+    console.error('Erro ao buscar cliente:', error);
+    throw error;
+  }
+}
+
+
+
+const emailCliente = '';
+const senha = '';
+
+findClienteByEmailAndPassword(email, senha)
+  .then(cliente => {
+    if (cliente) {
+      console.log('Cliente encontrado:', cliente);
+      
+    } else {
+      console.log('Credenciais inválidas');
+      
+    }
+  })
+  .catch(error => {
+    console.error('Erro:', error);
+    
+  });
+
+
+
+
+
+  async function findAdvogadoByEmailAndPassword(emailAdvogado, senha) {
+  try {
+    const db = await connectToDatabase();
+    const advogadoCollection = db.collection('advogado');
+    const advogado = await advogadoCollection.findOne({ Email: emailAdvogado, Senha: senha });
+    return advogado;
+  } catch (error) {
+    console.error('Erro ao buscar advogado:', error);
+    throw error;
+  }
+}
+
+const emailAdvogado = '';
+const senha = '';
+
+findAdvogadoByEmailAndPassword(emailAdvogado, senha)
+  .then(advogado => {
+    if (advogado) {
+      console.log('Advogado encontrado:', advogado);
+   
+    } else {
+      console.log('Invalid credentials');
+      
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    
+  });
+
+</script>
 
 </html>
